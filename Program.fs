@@ -1,12 +1,23 @@
 ﻿// For more information see https://aka.ms/fsharp-console-apps
+module ProjectHelperCli
+
 open System
-open System.CommandLine
-open Option
 
 [<EntryPoint>]
 let Main(args : string array) =
-    let localProjectName : string = args[0]
-    let gitProjectName : string = args[1]
-    let verboseOption = Option<string>("--verbose", [| "-v" |], Description = "Enable verbose logging")
-    printfn "Hello from F#"
-    0
+    let verbose = args |> Array.exists (fun arg -> arg = "--verbose" || arg = "-v")
+    let positionalArgs = args |> Array.filter (fun arg -> arg <> "--verbose" && arg <> "-v")
+
+    if positionalArgs.Length < 2 then
+        eprintfn "Usage: ProjectHelperCli <local-project-name> <git-project-name> [--verbose|-v]"
+        1
+    else
+        let localProjectName = positionalArgs[0]
+        let gitProjectName = positionalArgs[1]
+
+        if verbose then
+            printfn "Creating local project '%s' from git project '%s'" localProjectName gitProjectName
+        else
+            printfn "Local project: %s; git project: %s" localProjectName gitProjectName
+
+        0
