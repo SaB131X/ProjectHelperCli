@@ -61,3 +61,4 @@ shell.nix
 .envrc
 
 .fake
+.vscode/
