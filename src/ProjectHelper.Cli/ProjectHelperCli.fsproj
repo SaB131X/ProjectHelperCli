@@ -9,4 +9,8 @@
     <Compile Include="Program.fs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../ProjectHelper.Core/ProjectHelper.Core.fsproj" />
+  </ItemGroup>
+  
 </Project>

@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ProjectHelper.Core/ProjectHelper.Core.fsproj" />
+    <Project Path="src/ProjectHelper.Cli/ProjectHelperCli.fsproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ProjectHelper.Tests/ProjectHelper.Tests.fsproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="ArgTypes.fs" />
+    <Compile Include="Debug.fs" />
+    <Compile Include="ClaParser.fs" />
+    <Compile Include="GhClient.fs" />
+    <Compile Include="TemplateSystem.fs" />
+    <Compile Include="ProjectMaker.fs" />
+  </ItemGroup>
+
+</Project>
