@@ -57,8 +57,7 @@ TestResult.xml
 nunit-*.xml
 
 # Nix-DirEnv/ Nix Shell
-shell.nix
-.envrc
-
+flake.nix
+.direnv/
 .fake
 .vscode/
